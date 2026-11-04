@@ -5,7 +5,7 @@
 #  debian::codename::eq('buster') == True
 #  debian::codename::eq('stretch') == False
 function debian::codename::eq (
-    String $codename,
+  String $codename,
 ) >> Boolean {
-    debian::codename::compare($codename)
+  debian::codename::compare($codename)
 }

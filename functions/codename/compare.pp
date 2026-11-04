@@ -10,23 +10,23 @@
 #  debian::codename::compare('buster', '>=') == True
 #  debian::codename::compare('buster', '<=') == True
 function debian::codename::compare (
-    String                                 $codename,
-    Enum['==', '>=', '>', '<', '<=', '!='] $operator = '==',
+  String                                 $codename,
+  Enum['==', '>=', '>', '<', '<=', '!='] $operator = '==',
 ) >> Boolean {
-    include debian
+  include debian
 
-    $valid_codenames = $debian::supported[$facts['os']['name']]
+  $valid_codenames = $debian::supported[$facts['os']['name']]
 
-    unless $codename in $valid_codenames {
-        fail("invalid codename (${codename}). supported codenames : ${valid_codenames.keys.join(', ')}")
-    }
+  unless $codename in $valid_codenames {
+    fail("invalid codename (${codename}). supported codenames : ${valid_codenames.keys.join(', ')}")
+  }
 
-    $operator ? {
-        '>='    => Float($facts['os']['release']['major']) >= $valid_codenames[$codename],
-        '>'     => Float($facts['os']['release']['major']) > $valid_codenames[$codename],
-        '<='    => Float($facts['os']['release']['major']) <= $valid_codenames[$codename],
-        '<'     => Float($facts['os']['release']['major']) < $valid_codenames[$codename],
-        '!='    => Float($facts['os']['release']['major']) != $valid_codenames[$codename],
-        default => Float($facts['os']['release']['major']) == $valid_codenames[$codename],
-    }
+  $operator ? {
+    '>='    => Float($facts['os']['release']['major']) >= $valid_codenames[$codename],
+    '>'     => Float($facts['os']['release']['major']) > $valid_codenames[$codename],
+    '<='    => Float($facts['os']['release']['major']) <= $valid_codenames[$codename],
+    '<'     => Float($facts['os']['release']['major']) < $valid_codenames[$codename],
+    '!='    => Float($facts['os']['release']['major']) != $valid_codenames[$codename],
+    default => Float($facts['os']['release']['major']) == $valid_codenames[$codename],
+  }
 }

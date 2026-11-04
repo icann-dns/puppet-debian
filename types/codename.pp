@@ -4,5 +4,5 @@
 #     dist => lookup('foo::bar', Debian::Codename)
 #   }
 type Debian::Codename = Variant[
-    Debian::Codename::Debian,
+  Debian::Codename::Debian,
 ]

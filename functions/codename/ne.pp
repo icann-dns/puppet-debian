@@ -5,7 +5,7 @@
 #  debian::codename::ne('buster') == False
 #  debian::codename::ne('stretch') == True
 function debian::codename::ne (
-    String $codename,
+  String $codename,
 ) >> Boolean {
-    debian::codename::compare($codename, '!=')
+  debian::codename::compare($codename, '!=')
 }

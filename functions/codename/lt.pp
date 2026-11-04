@@ -6,7 +6,7 @@
 #  debian::codename::lt('stretch') == False
 #  debian::codename::lt('bullseye') == True
 function debian::codename::lt (
-    String $codename,
+  String $codename,
 ) >> Boolean {
-    debian::codename::compare($codename, '<')
+  debian::codename::compare($codename, '<')
 }
