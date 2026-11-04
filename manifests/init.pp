@@ -12,12 +12,15 @@ class debian {
       'bullseye' => 11,
       'bookworm' => 12,
       'trixie'   => 13,
+      'forxy'    => 14,
+      'duke'     => 15,
     },
     'Ubuntu' => {
-      'bionic' => 18.04,
-      'focal'  => 20.04,
-      'jammy'  => 22.04,
-      'noble'  => 24.04,
+      'bionic'    => 18.04,
+      'focal'     => 20.04,
+      'jammy'     => 22.04,
+      'noble'     => 24.04,
+      'resolute'  => 26.04,
     },
   }
   unless $facts['os']['name'] in $supported {
