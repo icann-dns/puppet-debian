@@ -1,5 +1,5 @@
 {
-  "name": "puppet-debian",
+  "name": "icann-debian",
   "version": "0.1.1",
   "author": "b4ldr",
   "summary": "A module to deploy provid debian helper functions",
