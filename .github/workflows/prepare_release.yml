@@ -21,8 +21,8 @@ jobs:
     with:
       version: ${{ github.event.inputs.version }}
       allowed_owner: 'icann-dns'
-      git_name: 'pccibot'
-      git_email: '12855858+pccibot@users.noreply.github.com'
+      git_name: 'icann-dns-release-bot[bot]'
+      git_email: '352992185+icann-dns-release-bot[bot]@users.noreply.github.com'
       app_client_id: '${{ vars.RELEASE_APP_CLIENT_ID }}'
     secrets:
       # Configure secrets here:
