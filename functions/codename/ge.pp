@@ -6,7 +6,7 @@
 #  debian::codename::ge('stretch') == True
 #  debian::codename::ge('bullseye') == False
 function debian::codename::ge (
-    String $codename,
+  String $codename,
 ) >> Boolean {
-    debian::codename::compare($codename, '>=')
+  debian::codename::compare($codename, '>=')
 }

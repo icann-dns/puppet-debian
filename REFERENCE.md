@@ -7,36 +7,36 @@
 ### Classes
 
 * [`debian`](#debian): preform basic constraints tests and configure variables
-this class will be called automaticly
+this class will be called automatically
 
 ### Functions
 
-* [`debian::codename`](#debiancodename): this function is just a simple alias to $facts['os']['name']['codename']
-* [`debian::codename::compare`](#debiancodenamecompare): Test if the running debian codename against the codename passed using a specific operator
-* [`debian::codename::eq`](#debiancodenameeq): Test if the running debian codename is equal to the codename passed
-* [`debian::codename::ge`](#debiancodenamege): Test if the running debian codename is greater then or equal to the codename passed
-* [`debian::codename::gt`](#debiancodenamegt): Test if the running debian codename is greater then the codename passed
-* [`debian::codename::le`](#debiancodenamele): Test if the running debian codename is less then or equal to the codename passed
-* [`debian::codename::lt`](#debiancodenamelt): Test if the running debian codname is less then the codname passed
-* [`debian::codename::ne`](#debiancodenamene): Test if the running debian codename is not equal to the codename passed
-* [`debian::codename::require`](#debiancodenamerequire): fail to compile if the running debian codename against the codename passed using a specific operator.
+* [`debian::codename`](#debian--codename): this function is just a simple alias to $facts['os']['name']['codename']
+* [`debian::codename::compare`](#debian--codename--compare): Test if the running debian codename against the codename passed using a specific operator
+* [`debian::codename::eq`](#debian--codename--eq): Test if the running debian codename is equal to the codename passed
+* [`debian::codename::ge`](#debian--codename--ge): Test if the running debian codename is greater then or equal to the codename passed
+* [`debian::codename::gt`](#debian--codename--gt): Test if the running debian codename is greater then the codename passed
+* [`debian::codename::le`](#debian--codename--le): Test if the running debian codename is less then or equal to the codename passed
+* [`debian::codename::lt`](#debian--codename--lt): Test if the running debian codname is less then the codname passed
+* [`debian::codename::ne`](#debian--codename--ne): Test if the running debian codename is not equal to the codename passed
+* [`debian::codename::require`](#debian--codename--require): fail to compile if the running debian codename against the codename passed using a specific operator.
 
 ### Data types
 
-* [`Debian::Codename`](#debiancodename): a type which can be used to validate debian and supported debian derivative codenames
-* [`Debian::Codename::Debian`](#debiancodenamedebian): a type which can be used to validate debian codenames.  specifically ones
+* [`Debian::Codename`](#Debian--Codename): a type which can be used to validate debian and supported debian derivative codenames
+* [`Debian::Codename::Debian`](#Debian--Codename--Debian): a type which can be used to validate debian codenames.  specifically ones
 from the debian project and not including any debian derivatives
 
 ## Classes
 
-### `debian`
+### <a name="debian"></a>`debian`
 
 preform basic constraints tests and configure variables
-this class will be called automaticly
+this class will be called automatically
 
 ## Functions
 
-### `debian::codename`
+### <a name="debian--codename"></a>`debian::codename`
 
 Type: Puppet Language
 
@@ -48,7 +48,7 @@ The debian::codename function.
 
 Returns: `String` $facts['os']['name']['codename']
 
-### `debian::codename::compare`
+### <a name="debian--codename--compare"></a>`debian::codename::compare`
 
 Type: Puppet Language
 
@@ -98,7 +98,7 @@ Data type: `Enum['==', '>=', '>', '<', '<=', '!=']`
 
 the comparison operator to use
 
-### `debian::codename::eq`
+### <a name="debian--codename--eq"></a>`debian::codename::eq`
 
 Type: Puppet Language
 
@@ -134,7 +134,7 @@ Data type: `String`
 
 the codename you want to test against
 
-### `debian::codename::ge`
+### <a name="debian--codename--ge"></a>`debian::codename::ge`
 
 Type: Puppet Language
 
@@ -172,7 +172,7 @@ Data type: `String`
 
 the codename you want to test against
 
-### `debian::codename::gt`
+### <a name="debian--codename--gt"></a>`debian::codename::gt`
 
 Type: Puppet Language
 
@@ -210,7 +210,7 @@ Data type: `String`
 
 the codename you want to test against
 
-### `debian::codename::le`
+### <a name="debian--codename--le"></a>`debian::codename::le`
 
 Type: Puppet Language
 
@@ -248,7 +248,7 @@ Data type: `String`
 
 the codename you want to test against
 
-### `debian::codename::lt`
+### <a name="debian--codename--lt"></a>`debian::codename::lt`
 
 Type: Puppet Language
 
@@ -286,7 +286,7 @@ Data type: `String`
 
 the codename you want to test against
 
-### `debian::codename::ne`
+### <a name="debian--codename--ne"></a>`debian::codename::ne`
 
 Type: Puppet Language
 
@@ -322,7 +322,7 @@ Data type: `String`
 
 the codename you want to test against
 
-### `debian::codename::require`
+### <a name="debian--codename--require"></a>`debian::codename::require`
 
 Type: Puppet Language
 
@@ -374,13 +374,13 @@ the comparison operator to us i.e
 
 ## Data types
 
-### `Debian::Codename`
+### <a name="Debian--Codename"></a>`Debian::Codename`
 
 a type which can be used to validate debian and supported debian derivative codenames
 
 #### Examples
 
-##### 
+#####
 
 ```puppet
 apt::repository {'foo':
@@ -390,14 +390,14 @@ apt::repository {'foo':
 
 Alias of `Variant[Debian::Codename::Debian]`
 
-### `Debian::Codename::Debian`
+### <a name="Debian--Codename--Debian"></a>`Debian::Codename::Debian`
 
 a type which can be used to validate debian codenames.  specifically ones
 from the debian project and not including any debian derivatives
 
 #### Examples
 
-##### 
+#####
 
 ```puppet
 apt::repository {'foo':
@@ -406,4 +406,3 @@ apt::repository {'foo':
 ```
 
 Alias of `Enum['jessie', 'stretch', 'buster', 'bullseye']`
-

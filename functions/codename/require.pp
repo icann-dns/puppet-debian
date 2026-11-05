@@ -10,10 +10,10 @@
 #  debian::codename::compare('buster', '>=') # pass/no action
 #  debian::codename::compare('buster', '<=') # pass/no action
 function debian::codename::require (
-    String                                 $codename,
-    Enum['==', '>=', '>', '<', '<=', '!='] $operator = '==',
+  String                                 $codename,
+  Enum['==', '>=', '>', '<', '<=', '!='] $operator = '==',
 ) {
-    unless debian::codename::compare($codename, $operator) {
-        fail("node codename does not meet requirement `${debian::codename()} ${operator} ${codename}`")
-    }
+  unless debian::codename::compare($codename, $operator) {
+    fail("node codename does not meet requirement `${debian::codename()} ${operator} ${codename}`")
+  }
 }

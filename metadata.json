@@ -1,6 +1,6 @@
 {
-  "name": "puppet-debian",
-  "version": "0.1.0",
+  "name": "icann-debian",
+  "version": "0.1.1",
   "author": "b4ldr",
   "summary": "A module to deploy provid debian helper functions",
   "license": "Apache-2.0",
@@ -11,28 +11,26 @@
     {
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
-        "8",
-        "9",
-        "10",
-        "11"
+        "12",
+        "13",
+        "14",
+        "15"
       ]
     },
     {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
-        "18.04",
-        "20.04",
         "22.04",
-        "24.04"
+        "24.04",
+        "26.04"
       ]
     }
   ],
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 5.5.8 < 9.0.0"
+      "version_requirement": ">= 8.0.0 < 9.0.0"
     }
   ],
-  "dependencies": [
-  ]
+  "dependencies": []
 }
